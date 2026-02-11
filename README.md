@@ -2,7 +2,6 @@
 
 A collection of data analysis projects demonstrating the use of Python for extracting insights and creating visualizations using popular libraries like pandas, numpy, matplotlib, plotly, and seaborn.
 
-
 ## 📋 Table of Contents
 
 - [About](#about)
@@ -22,7 +21,7 @@ This repository includes projects that showcase the usage of Python in finding i
 
 ## 📊 Projects
 
-### E-commerce Sales Analysis
+### 1. E-commerce Sales Analysis
 Analysis of e-commerce sales data to uncover trends, patterns, and actionable insights for business decision-making.
 
 **Key Features:**
@@ -31,6 +30,16 @@ Analysis of e-commerce sales data to uncover trends, patterns, and actionable in
 - Product category insights
 - Time-series trends
 - Revenue optimization strategies
+
+### 2. Zomato Data Analysis
+Comprehensive analysis of Zomato restaurant data to explore dining trends, customer preferences, and restaurant performance metrics.
+
+**Key Features:**
+- Restaurant ratings and reviews analysis
+- Cuisine type distribution
+- Location-based insights
+- Price range analysis
+- Popular dining trends
 
 ## 🛠️ Technologies Used
 
@@ -92,11 +101,20 @@ pip install pandas numpy matplotlib seaborn plotly jupyter
 
 2. **Navigate to the project folder:**
    - Open your browser (Jupyter should open automatically at `http://localhost:8888`)
-   - Navigate to `E-commerce sales analysis` folder
+   - Choose either:
+     - `E-commerce sales analysis` folder
+     - `Zomato Data Analysis` folder
 
 3. **Open and run the analysis notebook:**
-   - Click on `E-Commerce Analysis using Python.ipynb` to open it
-   - The notebook uses the `Sample - Superstore.csv` dataset
+   
+   **For E-commerce Analysis:**
+   - Click on `E-Commerce Analysis using Python.ipynb`
+   - Uses the `Sample - Superstore.csv` dataset
+   
+   **For Zomato Analysis:**
+   - Click on `Zomato Data Analysis.ipynb`
+   - Uses the `Zomato_data.csv` dataset
+   
    - Run cells sequentially by pressing `Shift + Enter`
    - Or run all cells: `Cell → Run All`
 
@@ -115,7 +133,7 @@ pip install pandas numpy matplotlib seaborn plotly jupyter
 # Launch Jupyter Notebook
 jupyter notebook
 
-# Open E-Commerce Analysis using Python.ipynb from the E-commerce sales analysis folder
+# Navigate to desired project folder and open the .ipynb file
 ```
 
 ### Method 3: Using JupyterLab (Alternative)
@@ -125,7 +143,9 @@ pip install jupyterlab
 jupyter lab
 ```
 
-Then navigate to `E-commerce sales analysis/E-Commerce Analysis using Python.ipynb`
+Then navigate to:
+- `E-commerce sales analysis/E-Commerce Analysis using Python.ipynb`, or
+- `Zomato Data Analysis/Zomato Data Analysis.ipynb`
 
 ## 📁 Project Structure
 
@@ -135,6 +155,10 @@ Data-Analysis-Projects/
 ├── E-commerce sales analysis/
 │   ├── E-Commerce Analysis using Python.ipynb    # Main analysis notebook
 │   └── Sample - Superstore.csv                   # E-commerce dataset
+│
+├── Zomato Data Analysis/
+│   ├── Zomato Data Analysis.ipynb                # Zomato analysis notebook
+│   └── Zomato_data.csv                           # Zomato dataset
 │
 ├── LICENSE                                       # MIT License
 └── README.md                                     # Main documentation (this file)
@@ -188,12 +212,14 @@ python -m ipykernel install --user
 
 ### Dataset Information
 
-The project uses the **Sample - Superstore.csv** dataset located in the `E-commerce sales analysis` folder.
+This repository contains two main datasets:
 
-### Loading the Dataset
+1. **Sample - Superstore.csv** - Located in `E-commerce sales analysis` folder
+2. **Zomato_data.csv** - Located in `Zomato Data Analysis` folder
 
-In the Jupyter notebook, the data is loaded as follows:
+### Loading the Datasets
 
+**E-commerce Data:**
 ```python
 import pandas as pd
 
@@ -205,20 +231,39 @@ print(df.head())
 
 # Get basic information
 print(df.info())
+```
+
+**Zomato Data:**
+```python
+import pandas as pd
+
+# Load the Zomato dataset
+df = pd.read_csv('Zomato_data.csv')
+
+# Display first few rows
+print(df.head())
 
 # Statistical summary
 print(df.describe())
 ```
 
-### Typical Dataset Structure
+### Typical Dataset Structures
 
-The Superstore dataset typically includes columns such as:
+**Superstore Dataset includes:**
 - Order ID, Order Date
 - Customer information
 - Product details (Category, Sub-Category)
 - Sales, Quantity, Profit
 - Region, State, City
 - Shipping details
+
+**Zomato Dataset includes:**
+- Restaurant names and IDs
+- Location and address
+- Cuisines offered
+- Average cost for two
+- Ratings and votes
+- Online ordering and table booking availability
 
 ## 🤝 Contributing
 
